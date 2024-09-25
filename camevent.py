@@ -51,8 +51,8 @@ def sendPushoverNotif(app_concat="", event_type=""):
 
 def sendSlackNotif():
 	slack_msg = "text=Your camera was just (de)activated. Did you do that?"
-	channel = "channel=C054SAU5KNC"
-	token = "xoxb-5162368159648-5166676343475-OyHlIUnjtE2VnnSJvyaO6E9e"
+	channel = "channel="
+	token = ""
 	bash_cmd = 'curl -d "' + slack_msg + '" -d "' + channel + '" -H "Authorization: Bearer ' + token + '" -X POST https://slack.com/api/chat.postMessage'
 	subprocess.run(bash_cmd, stdout=subprocess.PIPE, shell=True)
 
